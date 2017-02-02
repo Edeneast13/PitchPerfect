@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqn-Kk-kpN">
+                                <color key="backgroundColor" red="0.0067950606773674593" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XIG-x6-8CE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap To Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhN-V1-Hx3">
+                                <frame key="frameInset" minX="127" minY="356" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eR6-Hi-r01">
+                                <frame key="frameInset" minX="132" minY="385" width="110" height="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ewd-Wj-pbI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eR6-Hi-r01" firstAttribute="top" secondItem="YhN-V1-Hx3" secondAttribute="bottom" constant="8" id="FAX-Dw-duq"/>
+                            <constraint firstItem="YhN-V1-Hx3" firstAttribute="top" secondItem="Lqn-Kk-kpN" secondAttribute="bottom" constant="7.5" id="ILz-Tf-C6z"/>
+                            <constraint firstItem="eR6-Hi-r01" firstAttribute="centerX" secondItem="YhN-V1-Hx3" secondAttribute="centerX" id="ZPm-hE-7Az"/>
+                            <constraint firstItem="YhN-V1-Hx3" firstAttribute="centerX" secondItem="Lqn-Kk-kpN" secondAttribute="centerX" id="cfD-IV-kGT"/>
+                            <constraint firstItem="Lqn-Kk-kpN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ef4-R6-2og"/>
+                            <constraint firstItem="Lqn-Kk-kpN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z6z-eR-vft"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordButton" destination="Lqn-Kk-kpN" id="Eby-I3-zxo"/>
+                        <outlet property="recordingLabel" destination="YhN-V1-Hx3" id="ZM4-hO-u6S"/>
+                        <outlet property="stopRecordingButton" destination="eR6-Hi-r01" id="wSZ-8p-9mZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
